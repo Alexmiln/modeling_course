@@ -4,4 +4,6 @@ RUN apk add --no-cache bash
 
 WORKDIR /app
 
-CMD ["bash", "/app/docker/entrypoint/docker-entrypoint.sh"]
+COPY . .
+
+ENTRYPOINT ["docker/entrypoint/docker-entrypoint.sh"]
